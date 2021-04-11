@@ -174,11 +174,11 @@ namespace FinalProject
         }
 
         /// <summary>
-        /// Exits the application.
+        /// Closes the active instance.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void ButtonExitClick(object sender, EventArgs e)
+        public void ButtonCloseClick(object sender, EventArgs e)
         {
             Close();
         }

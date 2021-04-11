@@ -37,7 +37,7 @@ namespace FinalProject
             this.labelAverageOutput = new System.Windows.Forms.Label();
             this.buttonEnter = new System.Windows.Forms.Button();
             this.buttonReset = new System.Windows.Forms.Button();
-            this.buttonExit = new System.Windows.Forms.Button();
+            this.buttonClose = new System.Windows.Forms.Button();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.textBoxEmployee2Entries = new System.Windows.Forms.TextBox();
             this.textBoxEmployee3Entries = new System.Windows.Forms.TextBox();
@@ -56,7 +56,7 @@ namespace FinalProject
             this.labelUnitsPrompt.Size = new System.Drawing.Size(52, 23);
             this.labelUnitsPrompt.TabIndex = 1;
             this.labelUnitsPrompt.Text = "&Units:";
-            this.toolTip.SetToolTip(this.labelUnitsPrompt, "The number of units shipped.");
+            this.toolTip.SetToolTip(this.labelUnitsPrompt, "The number of units shipped");
             // 
             // textBoxEntryNumber
             // 
@@ -64,7 +64,7 @@ namespace FinalProject
             this.textBoxEntryNumber.Name = "textBoxEntryNumber";
             this.textBoxEntryNumber.Size = new System.Drawing.Size(56, 23);
             this.textBoxEntryNumber.TabIndex = 2;
-            this.toolTip.SetToolTip(this.textBoxEntryNumber, "Enter the units shipped for the specified day.");
+            this.toolTip.SetToolTip(this.textBoxEntryNumber, "Enter the units shipped for the specified day");
             // 
             // labelDay
             // 
@@ -74,7 +74,7 @@ namespace FinalProject
             this.labelDay.Size = new System.Drawing.Size(36, 15);
             this.labelDay.TabIndex = 0;
             this.labelDay.Text = "Day 1";
-            this.toolTip.SetToolTip(this.labelDay, "The day of the week.");
+            this.toolTip.SetToolTip(this.labelDay, "The day of the week");
             // 
             // textBoxEmployee1Entries
             // 
@@ -87,7 +87,7 @@ namespace FinalProject
             this.textBoxEmployee1Entries.TabIndex = 4;
             this.textBoxEmployee1Entries.TabStop = false;
             this.toolTip.SetToolTip(this.textBoxEmployee1Entries, "Displays the units shipped for all days entered so far for the particular employe" +
-        "e.");
+        "e");
             // 
             // labelAverageOutput
             // 
@@ -97,7 +97,7 @@ namespace FinalProject
             this.labelAverageOutput.Size = new System.Drawing.Size(345, 23);
             this.labelAverageOutput.TabIndex = 12;
             this.labelAverageOutput.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.toolTip.SetToolTip(this.labelAverageOutput, "Displays the calculated average units shipped.");
+            this.toolTip.SetToolTip(this.labelAverageOutput, "Displays the calculated average units shipped");
             // 
             // buttonEnter
             // 
@@ -106,7 +106,7 @@ namespace FinalProject
             this.buttonEnter.Size = new System.Drawing.Size(104, 23);
             this.buttonEnter.TabIndex = 13;
             this.buttonEnter.Text = "&Enter";
-            this.toolTip.SetToolTip(this.buttonEnter, "Enter to process the current units shipped.");
+            this.toolTip.SetToolTip(this.buttonEnter, "Enter to process the current units shipped");
             this.buttonEnter.UseVisualStyleBackColor = true;
             this.buttonEnter.Click += new System.EventHandler(this.ButtonEnterClick);
             // 
@@ -117,20 +117,20 @@ namespace FinalProject
             this.buttonReset.Size = new System.Drawing.Size(104, 23);
             this.buttonReset.TabIndex = 14;
             this.buttonReset.Text = "&Reset";
-            this.toolTip.SetToolTip(this.buttonReset, "Click to reset this form to allow new entries.");
+            this.toolTip.SetToolTip(this.buttonReset, "Click to reset this form to allow new entries");
             this.buttonReset.UseVisualStyleBackColor = true;
             this.buttonReset.Click += new System.EventHandler(this.ButtonResetClick);
             // 
-            // buttonExit
+            // buttonClose
             // 
-            this.buttonExit.Location = new System.Drawing.Point(254, 315);
-            this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(104, 23);
-            this.buttonExit.TabIndex = 15;
-            this.buttonExit.Text = "E&xit";
-            this.toolTip.SetToolTip(this.buttonExit, "Click to end the application.");
-            this.buttonExit.UseVisualStyleBackColor = true;
-            this.buttonExit.Click += new System.EventHandler(this.ButtonExitClick);
+            this.buttonClose.Location = new System.Drawing.Point(254, 315);
+            this.buttonClose.Name = "buttonClose";
+            this.buttonClose.Size = new System.Drawing.Size(104, 23);
+            this.buttonClose.TabIndex = 15;
+            this.buttonClose.Text = "Clo&se";
+            this.toolTip.SetToolTip(this.buttonClose, "Click to close the window");
+            this.buttonClose.UseVisualStyleBackColor = true;
+            this.buttonClose.Click += new System.EventHandler(this.ButtonCloseClick);
             // 
             // textBoxEmployee2Entries
             // 
@@ -143,7 +143,7 @@ namespace FinalProject
             this.textBoxEmployee2Entries.TabIndex = 7;
             this.textBoxEmployee2Entries.TabStop = false;
             this.toolTip.SetToolTip(this.textBoxEmployee2Entries, "Displays the units shipped for all days entered so far for the particular employe" +
-        "e.");
+        "e");
             // 
             // textBoxEmployee3Entries
             // 
@@ -156,7 +156,7 @@ namespace FinalProject
             this.textBoxEmployee3Entries.TabIndex = 10;
             this.textBoxEmployee3Entries.TabStop = false;
             this.toolTip.SetToolTip(this.textBoxEmployee3Entries, "Displays the units shipped for all days entered so far for the particular employe" +
-        "e.");
+        "e");
             // 
             // labelAverageEmployee1
             // 
@@ -166,7 +166,7 @@ namespace FinalProject
             this.labelAverageEmployee1.Size = new System.Drawing.Size(111, 23);
             this.labelAverageEmployee1.TabIndex = 5;
             this.labelAverageEmployee1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.toolTip.SetToolTip(this.labelAverageEmployee1, "Displays the calculated average units shipped for the particular employee.");
+            this.toolTip.SetToolTip(this.labelAverageEmployee1, "Displays the calculated average units shipped for the particular employee");
             // 
             // labelAverageEmployee2
             // 
@@ -176,7 +176,7 @@ namespace FinalProject
             this.labelAverageEmployee2.Size = new System.Drawing.Size(111, 23);
             this.labelAverageEmployee2.TabIndex = 8;
             this.labelAverageEmployee2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.toolTip.SetToolTip(this.labelAverageEmployee2, "Displays the calculated average units shipped for the particular employee.");
+            this.toolTip.SetToolTip(this.labelAverageEmployee2, "Displays the calculated average units shipped for the particular employee");
             // 
             // labelAverageEmployee3
             // 
@@ -186,7 +186,7 @@ namespace FinalProject
             this.labelAverageEmployee3.Size = new System.Drawing.Size(111, 23);
             this.labelAverageEmployee3.TabIndex = 11;
             this.labelAverageEmployee3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.toolTip.SetToolTip(this.labelAverageEmployee3, "Displays the calculated average units shipped for the particular employee.");
+            this.toolTip.SetToolTip(this.labelAverageEmployee3, "Displays the calculated average units shipped for the particular employee");
             // 
             // labelEmployee1Prompt
             // 
@@ -231,7 +231,7 @@ namespace FinalProject
             this.Controls.Add(this.textBoxEmployee2Entries);
             this.Controls.Add(this.labelAverageEmployee1);
             this.Controls.Add(this.labelEmployee1Prompt);
-            this.Controls.Add(this.buttonExit);
+            this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.buttonReset);
             this.Controls.Add(this.buttonEnter);
             this.Controls.Add(this.labelAverageOutput);
@@ -240,10 +240,12 @@ namespace FinalProject
             this.Controls.Add(this.textBoxEntryNumber);
             this.Controls.Add(this.labelUnitsPrompt);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(385, 397);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(385, 397);
             this.Name = "formAverageUnitsShipped";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Average Units Shipped Remaster";
+            this.Text = "Average Units Shipped";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AverageUnitsShippedClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -259,7 +261,7 @@ namespace FinalProject
         private System.Windows.Forms.Label labelAverageOutput;
         private System.Windows.Forms.Button buttonEnter;
         private System.Windows.Forms.Button buttonReset;
-        private System.Windows.Forms.Button buttonExit;
+        private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.ToolTip toolTip;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

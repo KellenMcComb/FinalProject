@@ -42,17 +42,15 @@ namespace FinalProject
             this.textBoxEditor.Multiline = true;
             this.textBoxEditor.Name = "textBoxEditor";
             this.textBoxEditor.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxEditor.Size = new System.Drawing.Size(384, 261);
+            this.textBoxEditor.Size = new System.Drawing.Size(492, 391);
             this.textBoxEditor.TabIndex = 0;
             // 
             // formTextEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 261);
+            this.ClientSize = new System.Drawing.Size(492, 391);
             this.Controls.Add(this.textBoxEditor);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "formTextEditor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kellen\'s Text Editor";

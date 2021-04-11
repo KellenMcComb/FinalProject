@@ -30,12 +30,15 @@ namespace FinalProject
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formMain));
             this.menuTop = new System.Windows.Forms.MenuStrip();
             this.menuFile = new System.Windows.Forms.ToolStripMenuItem();
             this.menuFileNew = new System.Windows.Forms.ToolStripMenuItem();
             this.menuFileOpen = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparatorFile1 = new System.Windows.Forms.ToolStripSeparator();
             this.menuFileSave = new System.Windows.Forms.ToolStripMenuItem();
             this.menuFileSaveAs = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparatorFile2 = new System.Windows.Forms.ToolStripSeparator();
             this.menuFileClose = new System.Windows.Forms.ToolStripMenuItem();
             this.menuFileExit = new System.Windows.Forms.ToolStripMenuItem();
             this.menuEdit = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,14 +49,20 @@ namespace FinalProject
             this.menuWindowCascade = new System.Windows.Forms.ToolStripMenuItem();
             this.menuWindowTileVertical = new System.Windows.Forms.ToolStripMenuItem();
             this.menuWindowTileHorizontal = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparatorWindow1 = new System.Windows.Forms.ToolStripSeparator();
             this.menuWindowCarList = new System.Windows.Forms.ToolStripMenuItem();
             this.menuWindowAverageUnits = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuWindowWeeklyTemperature = new System.Windows.Forms.ToolStripMenuItem();
             this.menuHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.menuHelpAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
+            this.toolStripNew = new System.Windows.Forms.ToolStripButton();
+            this.toolStripOpen = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSave = new System.Windows.Forms.ToolStripButton();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.menuTop.SuspendLayout();
+            this.toolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuTop
@@ -65,7 +74,7 @@ namespace FinalProject
             this.menuHelp});
             this.menuTop.Location = new System.Drawing.Point(0, 0);
             this.menuTop.Name = "menuTop";
-            this.menuTop.Size = new System.Drawing.Size(1053, 24);
+            this.menuTop.Size = new System.Drawing.Size(1184, 24);
             this.menuTop.TabIndex = 1;
             this.menuTop.Text = "menuStrip1";
             // 
@@ -74,8 +83,10 @@ namespace FinalProject
             this.menuFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuFileNew,
             this.menuFileOpen,
+            this.toolStripSeparatorFile1,
             this.menuFileSave,
             this.menuFileSaveAs,
+            this.toolStripSeparatorFile2,
             this.menuFileClose,
             this.menuFileExit});
             this.menuFile.Name = "menuFile";
@@ -88,7 +99,7 @@ namespace FinalProject
             this.menuFileNew.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
             this.menuFileNew.Size = new System.Drawing.Size(146, 22);
             this.menuFileNew.Text = "&New";
-            this.menuFileNew.ToolTipText = "Create a new file";
+            this.menuFileNew.ToolTipText = "Create a new text editor window";
             this.menuFileNew.Click += new System.EventHandler(this.FileNew);
             // 
             // menuFileOpen
@@ -97,7 +108,13 @@ namespace FinalProject
             this.menuFileOpen.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
             this.menuFileOpen.Size = new System.Drawing.Size(146, 22);
             this.menuFileOpen.Text = "&Open";
-            this.menuFileOpen.ToolTipText = "Open a file";
+            this.menuFileOpen.ToolTipText = "Opens a file in the currently selected text editor, or opens a new one otherwise";
+            this.menuFileOpen.Click += new System.EventHandler(this.FileOpen);
+            // 
+            // toolStripSeparatorFile1
+            // 
+            this.toolStripSeparatorFile1.Name = "toolStripSeparatorFile1";
+            this.toolStripSeparatorFile1.Size = new System.Drawing.Size(143, 6);
             // 
             // menuFileSave
             // 
@@ -105,21 +122,29 @@ namespace FinalProject
             this.menuFileSave.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
             this.menuFileSave.Size = new System.Drawing.Size(146, 22);
             this.menuFileSave.Text = "&Save";
-            this.menuFileSave.ToolTipText = "Save the current file";
+            this.menuFileSave.ToolTipText = "Save the current text editor file";
+            this.menuFileSave.Click += new System.EventHandler(this.FileSave);
             // 
             // menuFileSaveAs
             // 
             this.menuFileSaveAs.Name = "menuFileSaveAs";
             this.menuFileSaveAs.Size = new System.Drawing.Size(146, 22);
             this.menuFileSaveAs.Text = "Save &As";
-            this.menuFileSaveAs.ToolTipText = "Select the save location of the current file";
+            this.menuFileSaveAs.ToolTipText = "Select the save location of the current text editor file";
+            this.menuFileSaveAs.Click += new System.EventHandler(this.FileSaveAs);
+            // 
+            // toolStripSeparatorFile2
+            // 
+            this.toolStripSeparatorFile2.Name = "toolStripSeparatorFile2";
+            this.toolStripSeparatorFile2.Size = new System.Drawing.Size(143, 6);
             // 
             // menuFileClose
             // 
             this.menuFileClose.Name = "menuFileClose";
             this.menuFileClose.Size = new System.Drawing.Size(146, 22);
             this.menuFileClose.Text = "&Close";
-            this.menuFileClose.ToolTipText = "Close currently opened windows";
+            this.menuFileClose.ToolTipText = "Close the currently selected window";
+            this.menuFileClose.Click += new System.EventHandler(this.FileClose);
             // 
             // menuFileExit
             // 
@@ -127,6 +152,7 @@ namespace FinalProject
             this.menuFileExit.Size = new System.Drawing.Size(146, 22);
             this.menuFileExit.Text = "E&xit";
             this.menuFileExit.ToolTipText = "Exit the application";
+            this.menuFileExit.Click += new System.EventHandler(this.FileExit);
             // 
             // menuEdit
             // 
@@ -171,8 +197,10 @@ namespace FinalProject
             this.menuWindowCascade,
             this.menuWindowTileVertical,
             this.menuWindowTileHorizontal,
+            this.toolStripSeparatorWindow1,
             this.menuWindowCarList,
-            this.menuWindowAverageUnits});
+            this.menuWindowAverageUnits,
+            this.menuWindowWeeklyTemperature});
             this.menuWindow.Name = "menuWindow";
             this.menuWindow.Size = new System.Drawing.Size(63, 20);
             this.menuWindow.Text = "&Window";
@@ -180,7 +208,7 @@ namespace FinalProject
             // menuWindowCascade
             // 
             this.menuWindowCascade.Name = "menuWindowCascade";
-            this.menuWindowCascade.Size = new System.Drawing.Size(179, 22);
+            this.menuWindowCascade.Size = new System.Drawing.Size(213, 22);
             this.menuWindowCascade.Text = "&Cascade";
             this.menuWindowCascade.ToolTipText = "Cascade all currently open windows";
             this.menuWindowCascade.Click += new System.EventHandler(this.WindowCascade);
@@ -188,7 +216,7 @@ namespace FinalProject
             // menuWindowTileVertical
             // 
             this.menuWindowTileVertical.Name = "menuWindowTileVertical";
-            this.menuWindowTileVertical.Size = new System.Drawing.Size(179, 22);
+            this.menuWindowTileVertical.Size = new System.Drawing.Size(213, 22);
             this.menuWindowTileVertical.Text = "Tile &Vertical";
             this.menuWindowTileVertical.ToolTipText = "Tile currently open windows vertically";
             this.menuWindowTileVertical.Click += new System.EventHandler(this.WindowTileVertical);
@@ -196,15 +224,20 @@ namespace FinalProject
             // menuWindowTileHorizontal
             // 
             this.menuWindowTileHorizontal.Name = "menuWindowTileHorizontal";
-            this.menuWindowTileHorizontal.Size = new System.Drawing.Size(179, 22);
+            this.menuWindowTileHorizontal.Size = new System.Drawing.Size(213, 22);
             this.menuWindowTileHorizontal.Text = "Tile &Horizontal";
             this.menuWindowTileHorizontal.ToolTipText = "Tile currently open windows horizontally";
             this.menuWindowTileHorizontal.Click += new System.EventHandler(this.WindowTileHorizontal);
             // 
+            // toolStripSeparatorWindow1
+            // 
+            this.toolStripSeparatorWindow1.Name = "toolStripSeparatorWindow1";
+            this.toolStripSeparatorWindow1.Size = new System.Drawing.Size(210, 6);
+            // 
             // menuWindowCarList
             // 
             this.menuWindowCarList.Name = "menuWindowCarList";
-            this.menuWindowCarList.Size = new System.Drawing.Size(179, 22);
+            this.menuWindowCarList.Size = new System.Drawing.Size(213, 22);
             this.menuWindowCarList.Text = "Open Car &List";
             this.menuWindowCarList.ToolTipText = "Open the Car List window";
             this.menuWindowCarList.Click += new System.EventHandler(this.WindowCarList);
@@ -212,10 +245,18 @@ namespace FinalProject
             // menuWindowAverageUnits
             // 
             this.menuWindowAverageUnits.Name = "menuWindowAverageUnits";
-            this.menuWindowAverageUnits.Size = new System.Drawing.Size(179, 22);
+            this.menuWindowAverageUnits.Size = new System.Drawing.Size(213, 22);
             this.menuWindowAverageUnits.Text = "Open &Average Units";
             this.menuWindowAverageUnits.ToolTipText = "Open the Average Units Shipped window";
             this.menuWindowAverageUnits.Click += new System.EventHandler(this.WindowAverageUnits);
+            // 
+            // menuWindowWeeklyTemperature
+            // 
+            this.menuWindowWeeklyTemperature.Name = "menuWindowWeeklyTemperature";
+            this.menuWindowWeeklyTemperature.Size = new System.Drawing.Size(213, 22);
+            this.menuWindowWeeklyTemperature.Text = "Open &Weekly Temperature";
+            this.menuWindowWeeklyTemperature.ToolTipText = "Open the Weekly Temperature window";
+            this.menuWindowWeeklyTemperature.Click += new System.EventHandler(this.WindowWeeklyTemperature);
             // 
             // menuHelp
             // 
@@ -231,28 +272,63 @@ namespace FinalProject
             this.menuHelpAbout.Size = new System.Drawing.Size(107, 22);
             this.menuHelpAbout.Text = "&About";
             this.menuHelpAbout.ToolTipText = "Show information about this application";
+            this.menuHelpAbout.Click += new System.EventHandler(this.HelpAbout);
             // 
             // statusStrip
             // 
-            this.statusStrip.Location = new System.Drawing.Point(0, 684);
+            this.statusStrip.Location = new System.Drawing.Point(0, 689);
             this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(1053, 22);
+            this.statusStrip.Size = new System.Drawing.Size(1184, 22);
             this.statusStrip.TabIndex = 2;
             this.statusStrip.Text = "statusStrip1";
             // 
             // toolStrip
             // 
+            this.toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripNew,
+            this.toolStripOpen,
+            this.toolStripSave});
             this.toolStrip.Location = new System.Drawing.Point(0, 24);
             this.toolStrip.Name = "toolStrip";
-            this.toolStrip.Size = new System.Drawing.Size(1053, 25);
+            this.toolStrip.Size = new System.Drawing.Size(1184, 25);
             this.toolStrip.TabIndex = 3;
             this.toolStrip.Text = "toolStrip1";
+            // 
+            // toolStripNew
+            // 
+            this.toolStripNew.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripNew.Image = ((System.Drawing.Image)(resources.GetObject("toolStripNew.Image")));
+            this.toolStripNew.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripNew.Name = "toolStripNew";
+            this.toolStripNew.Size = new System.Drawing.Size(23, 22);
+            this.toolStripNew.Text = "&New";
+            this.toolStripNew.Click += new System.EventHandler(this.FileNew);
+            // 
+            // toolStripOpen
+            // 
+            this.toolStripOpen.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripOpen.Image = ((System.Drawing.Image)(resources.GetObject("toolStripOpen.Image")));
+            this.toolStripOpen.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripOpen.Name = "toolStripOpen";
+            this.toolStripOpen.Size = new System.Drawing.Size(23, 22);
+            this.toolStripOpen.Text = "&Open";
+            this.toolStripOpen.Click += new System.EventHandler(this.FileOpen);
+            // 
+            // toolStripSave
+            // 
+            this.toolStripSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripSave.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSave.Image")));
+            this.toolStripSave.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripSave.Name = "toolStripSave";
+            this.toolStripSave.Size = new System.Drawing.Size(23, 22);
+            this.toolStripSave.Text = "&Save";
+            this.toolStripSave.Click += new System.EventHandler(this.FileSave);
             // 
             // formMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1053, 706);
+            this.ClientSize = new System.Drawing.Size(1184, 711);
             this.Controls.Add(this.toolStrip);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.menuTop);
@@ -263,6 +339,8 @@ namespace FinalProject
             this.Text = "NETD 2202 Final Project";
             this.menuTop.ResumeLayout(false);
             this.menuTop.PerformLayout();
+            this.toolStrip.ResumeLayout(false);
+            this.toolStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -293,6 +371,13 @@ namespace FinalProject
         private System.Windows.Forms.ToolStripMenuItem menuWindowAverageUnits;
         private System.Windows.Forms.ToolStripMenuItem menuHelp;
         private System.Windows.Forms.ToolStripMenuItem menuHelpAbout;
+        private System.Windows.Forms.ToolStripMenuItem menuWindowWeeklyTemperature;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparatorFile1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparatorFile2;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparatorWindow1;
+        private System.Windows.Forms.ToolStripButton toolStripNew;
+        private System.Windows.Forms.ToolStripButton toolStripOpen;
+        private System.Windows.Forms.ToolStripButton toolStripSave;
     }
 }
 

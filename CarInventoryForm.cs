@@ -114,11 +114,11 @@ namespace FinalProject
         }
 
         /// <summary>
-        /// Closes the application.
+        /// Closes the active instance.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void ButtonExitClick(object sender, EventArgs e)
+        public void ButtonCloseClick(object sender, EventArgs e)
         {
             Close();
         }
@@ -130,14 +130,15 @@ namespace FinalProject
         /// <param name="e"></param>
         private void CarSelected(object sender, EventArgs e)
         {
+            // If there is at least one car in the list, and any car is selected:
             if (listViewEntries.Items.Count > 0 && listViewEntries.FocusedItem != null)
             {
-                // Copying car's properties to input fields.
+                // Copy the selected car's properties to input fields.
                 comboBoxMake.Text = listViewEntries.FocusedItem.SubItems[2].Text;
                 textBoxModel.Text = listViewEntries.FocusedItem.SubItems[3].Text;
                 comboBoxYear.Text = listViewEntries.FocusedItem.SubItems[4].Text;
                 checkBoxNew.Checked = listViewEntries.FocusedItem.Checked;
-                // Removes currency formatting on "Price" field for easier data modification.
+                // Remove currency formatting on "Price" field for easier data modification.
                 decimal price = decimal.Parse(listViewEntries.FocusedItem.SubItems[5].Text,
                     System.Globalization.NumberStyles.Any);
                 textBoxPrice.Text = price.ToString();

@@ -47,7 +47,7 @@ namespace FinalProject
             this.columnHeaderPrice = new System.Windows.Forms.ColumnHeader();
             this.checkBoxNew = new System.Windows.Forms.CheckBox();
             this.labelOutput = new System.Windows.Forms.Label();
-            this.buttonExit = new System.Windows.Forms.Button();
+            this.buttonClose = new System.Windows.Forms.Button();
             this.buttonReset = new System.Windows.Forms.Button();
             this.buttonEnter = new System.Windows.Forms.Button();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
@@ -239,16 +239,16 @@ namespace FinalProject
             this.labelOutput.TabIndex = 10;
             this.toolTip.SetToolTip(this.labelOutput, "Displays any messages");
             // 
-            // buttonExit
+            // buttonClose
             // 
-            this.buttonExit.Location = new System.Drawing.Point(314, 461);
-            this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(75, 23);
-            this.buttonExit.TabIndex = 13;
-            this.buttonExit.Text = "&Close";
-            this.toolTip.SetToolTip(this.buttonExit, "Select to exit the application");
-            this.buttonExit.UseVisualStyleBackColor = true;
-            this.buttonExit.Click += new System.EventHandler(this.ButtonExitClick);
+            this.buttonClose.Location = new System.Drawing.Point(314, 461);
+            this.buttonClose.Name = "buttonClose";
+            this.buttonClose.Size = new System.Drawing.Size(75, 23);
+            this.buttonClose.TabIndex = 13;
+            this.buttonClose.Text = "Clo&se";
+            this.toolTip.SetToolTip(this.buttonClose, "Click to close the window");
+            this.buttonClose.UseVisualStyleBackColor = true;
+            this.buttonClose.Click += new System.EventHandler(this.ButtonCloseClick);
             // 
             // buttonReset
             // 
@@ -281,7 +281,7 @@ namespace FinalProject
             this.ClientSize = new System.Drawing.Size(401, 487);
             this.Controls.Add(this.buttonEnter);
             this.Controls.Add(this.buttonReset);
-            this.Controls.Add(this.buttonExit);
+            this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.labelOutput);
             this.Controls.Add(this.checkBoxNew);
             this.Controls.Add(this.listViewEntries);
@@ -294,7 +294,9 @@ namespace FinalProject
             this.Controls.Add(this.labelMake);
             this.Controls.Add(this.comboBoxMake);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(417, 526);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(417, 526);
             this.Name = "formCarInventory";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Car Inventory";
@@ -318,7 +320,7 @@ namespace FinalProject
         private System.Windows.Forms.ListView listViewEntries;
         private System.Windows.Forms.CheckBox checkBoxNew;
         private System.Windows.Forms.Label labelOutput;
-        private System.Windows.Forms.Button buttonExit;
+        private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.Button buttonReset;
         private System.Windows.Forms.Button buttonEnter;
         private System.Windows.Forms.ColumnHeader columnHeaderNew;

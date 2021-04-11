@@ -127,11 +127,11 @@ namespace FinalProject
         }
 
         /// <summary>
-        /// Exits the application.
+        /// Closes the active text editor window.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        public void FileExit(object sender, EventArgs e)
+        public void FileClose(object sender, EventArgs e)
         {
             // Me close form.
             Close();
@@ -201,17 +201,7 @@ namespace FinalProject
             textBoxEditor.SelectAll();
         }
 
-        /// <summary>
-        /// Displays the "About" information for the program.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        public void HelpAbout(object sender, EventArgs e)
-        {
-            // Show the about info in a messagebox.
-            MessageBox.Show("Text Editor\n" + "By Kellen McComb\n\n" + 
-                "For NETD 2202\n" + "March 2021", "About This Application");
-        }
+        
 
         #endregion
         #region "Other Functions"
