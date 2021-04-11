@@ -310,7 +310,7 @@ namespace FinalProject
         }
 
         /// <summary>
-        /// When the CarInventory instance is closed, the contents of the instance 
+        /// Upon the CarInventory instance closing, the contents of the instance 
         /// variable is destroyed.
         /// </summary>
         /// <param name="sender"></param>

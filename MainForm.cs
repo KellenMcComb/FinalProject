@@ -142,11 +142,39 @@ namespace FinalProject
             this.LayoutMdi(MdiLayout.TileVertical);
         }
 
+        /// <summary>
+        /// Create and display a Car Inventory Form instance as an MDI child.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void WindowCarList(object sender, EventArgs e)
         {
+            // Create/call Car Inventory Form instance called listInstance.
             formCarInventory listInstance = formCarInventory.Instance;
+
+            // Set it as an MDI child.
             listInstance.MdiParent = this;
+
+            // Display the window.
             listInstance.Show();
+
+            // Set focus to the new window.
+            listInstance.Focus();
+        }
+
+        private void WindowAverageUnits(object sender, EventArgs e)
+        {
+            // Create/call Car Inventory Form instance called listInstance.
+            formAverageUnitsShipped shippedInstance = formAverageUnitsShipped.Instance;
+
+            // Set it as an MDI child.
+            shippedInstance.MdiParent = this;
+
+            // Display the window.
+            shippedInstance.Show();
+
+            // Set focus to the new window.
+            shippedInstance.Focus();
         }
     }
 }

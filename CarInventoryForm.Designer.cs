@@ -245,7 +245,7 @@ namespace FinalProject
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(75, 23);
             this.buttonExit.TabIndex = 13;
-            this.buttonExit.Text = "E&xit";
+            this.buttonExit.Text = "&Close";
             this.toolTip.SetToolTip(this.buttonExit, "Select to exit the application");
             this.buttonExit.UseVisualStyleBackColor = true;
             this.buttonExit.Click += new System.EventHandler(this.ButtonExitClick);

@@ -215,6 +215,7 @@ namespace FinalProject
             this.menuWindowAverageUnits.Size = new System.Drawing.Size(179, 22);
             this.menuWindowAverageUnits.Text = "Open &Average Units";
             this.menuWindowAverageUnits.ToolTipText = "Open the Average Units Shipped window";
+            this.menuWindowAverageUnits.Click += new System.EventHandler(this.WindowAverageUnits);
             // 
             // menuHelp
             // 
