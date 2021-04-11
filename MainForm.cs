@@ -17,5 +17,129 @@ namespace FinalProject
             InitializeComponent();
         }
 
+
+        /// <summary>
+        /// Opens a new text editor child window.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void FileNew(object sender, EventArgs e)
+        {
+            formTextEditor textEditorInstance = new formTextEditor();
+            textEditorInstance.MdiParent = this;
+            textEditorInstance.Show();
+        }
+
+        /// <summary>
+        /// If the active mdi window is the text editor, call the Cut event handler
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void EditCut(object sender, EventArgs e)
+        {
+            // If there is an active window:
+            if (this.MdiChildren.Length > 0)
+            {
+                // If the text editor window is the currently active window...
+                if (this.ActiveMdiChild.GetType() == typeof(formTextEditor))
+                {
+                    // ...call the text editor's Cut event handler.
+                    formTextEditor textEditorInstance = (formTextEditor)this.ActiveMdiChild;
+                    textEditorInstance.EditCut(sender, e);
+                }
+                // If the text editor is not the active window...
+                else
+                {
+                    // ...display an appropriate message.
+                    MessageBox.Show("The Cut operation is not supported by the currently " +
+                        "selected window.", "Operation Not Supported");
+                }
+            }
+        }
+
+        /// <summary>
+        /// If the active mdi window is the text editor, call the Copy event handler
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void EditCopy(object sender, EventArgs e)
+        {
+            // If there is an active window:
+            if(this.MdiChildren.Length > 0)
+            {
+                // If the text editor window is the currently active window...
+                if (this.ActiveMdiChild.GetType() == typeof(formTextEditor))
+                {
+                    // ...call the text editor's Copy event handler.
+                    formTextEditor textEditorInstance = (formTextEditor)this.ActiveMdiChild;
+                    textEditorInstance.EditCopy(sender, e);
+                }
+                // If the text editor is not the active window...
+                else
+                {
+                    // ...display an appropriate message.
+                    MessageBox.Show("The Copy operation is not supported by the currentli " +
+                        "selected window.", "Operation Not Supported");
+                }
+            }
+        }
+
+        /// <summary>
+        /// If the active mdi window is the text editor, call the Paste event handler
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void EditPaste(object sender, EventArgs e)
+        {
+            // If there is an active window:
+            if (this.MdiChildren.Length > 0)
+            {
+                // If the text editor window is the currently active window...
+                if (this.ActiveMdiChild.GetType() == typeof(formTextEditor))
+                {
+                    // ...call the text editor's Paste event handler.
+                    formTextEditor textEditorInstance = (formTextEditor)this.ActiveMdiChild;
+                    textEditorInstance.EditPaste(sender, e);
+                }
+                // If the text editor is not the active window...
+                else
+                {
+                    // ...display an appropriate message.
+                    MessageBox.Show("The Paste operation is not supported by the currently " +
+                        "selected window.", "Operation Not Supported");
+                }
+            }
+        }
+
+
+        /// <summary>
+        /// Changes the window layout to "Cascade".
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void WindowCascade(object sender, EventArgs e)
+        {
+            this.LayoutMdi(MdiLayout.Cascade);
+        }
+
+        /// <summary>
+        /// Changes the window layout to "Tile Horizontal".
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void WindowTileHorizontal(object sender, EventArgs e)
+        {
+            this.LayoutMdi(MdiLayout.TileHorizontal);
+        }
+
+        /// <summary>
+        /// Changes the window layout to "Tile Vertical".
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void WindowTileVertical(object sender, EventArgs e)
+        {
+            this.LayoutMdi(MdiLayout.TileVertical);
+        }
     }
 }

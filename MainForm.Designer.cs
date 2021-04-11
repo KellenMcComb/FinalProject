@@ -65,7 +65,7 @@ namespace FinalProject
             this.menuHelp});
             this.menuTop.Location = new System.Drawing.Point(0, 0);
             this.menuTop.Name = "menuTop";
-            this.menuTop.Size = new System.Drawing.Size(817, 24);
+            this.menuTop.Size = new System.Drawing.Size(1053, 24);
             this.menuTop.TabIndex = 1;
             this.menuTop.Text = "menuStrip1";
             // 
@@ -89,6 +89,7 @@ namespace FinalProject
             this.menuFileNew.Size = new System.Drawing.Size(146, 22);
             this.menuFileNew.Text = "&New";
             this.menuFileNew.ToolTipText = "Create a new file";
+            this.menuFileNew.Click += new System.EventHandler(this.FileNew);
             // 
             // menuFileOpen
             // 
@@ -144,6 +145,7 @@ namespace FinalProject
             this.menuEditCut.Size = new System.Drawing.Size(144, 22);
             this.menuEditCut.Text = "Cu&t";
             this.menuEditCut.ToolTipText = "Copy selected text to the clipboard and delete it";
+            this.menuEditCut.Click += new System.EventHandler(this.EditCut);
             // 
             // menuEditCopy
             // 
@@ -152,6 +154,7 @@ namespace FinalProject
             this.menuEditCopy.Size = new System.Drawing.Size(144, 22);
             this.menuEditCopy.Text = "&Copy";
             this.menuEditCopy.ToolTipText = "Copy selected text to the clipboard";
+            this.menuEditCopy.Click += new System.EventHandler(this.EditCopy);
             // 
             // menuEditPaste
             // 
@@ -160,6 +163,7 @@ namespace FinalProject
             this.menuEditPaste.Size = new System.Drawing.Size(144, 22);
             this.menuEditPaste.Text = "&Paste";
             this.menuEditPaste.ToolTipText = "Paste the contents of the clipboard";
+            this.menuEditPaste.Click += new System.EventHandler(this.EditPaste);
             // 
             // menuWindow
             // 
@@ -179,6 +183,7 @@ namespace FinalProject
             this.menuWindowCascade.Size = new System.Drawing.Size(179, 22);
             this.menuWindowCascade.Text = "&Cascade";
             this.menuWindowCascade.ToolTipText = "Cascade all currently open windows";
+            this.menuWindowCascade.Click += new System.EventHandler(this.WindowCascade);
             // 
             // menuWindowTileVertical
             // 
@@ -186,6 +191,7 @@ namespace FinalProject
             this.menuWindowTileVertical.Size = new System.Drawing.Size(179, 22);
             this.menuWindowTileVertical.Text = "Tile &Vertical";
             this.menuWindowTileVertical.ToolTipText = "Tile currently open windows vertically";
+            this.menuWindowTileVertical.Click += new System.EventHandler(this.WindowTileVertical);
             // 
             // menuWindowTileHorizontal
             // 
@@ -193,6 +199,7 @@ namespace FinalProject
             this.menuWindowTileHorizontal.Size = new System.Drawing.Size(179, 22);
             this.menuWindowTileHorizontal.Text = "Tile &Horizontal";
             this.menuWindowTileHorizontal.ToolTipText = "Tile currently open windows horizontally";
+            this.menuWindowTileHorizontal.Click += new System.EventHandler(this.WindowTileHorizontal);
             // 
             // menuWindowCarList
             // 
@@ -225,9 +232,9 @@ namespace FinalProject
             // 
             // statusStrip
             // 
-            this.statusStrip.Location = new System.Drawing.Point(0, 592);
+            this.statusStrip.Location = new System.Drawing.Point(0, 684);
             this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(817, 22);
+            this.statusStrip.Size = new System.Drawing.Size(1053, 22);
             this.statusStrip.TabIndex = 2;
             this.statusStrip.Text = "statusStrip1";
             // 
@@ -235,7 +242,7 @@ namespace FinalProject
             // 
             this.toolStrip.Location = new System.Drawing.Point(0, 24);
             this.toolStrip.Name = "toolStrip";
-            this.toolStrip.Size = new System.Drawing.Size(817, 25);
+            this.toolStrip.Size = new System.Drawing.Size(1053, 25);
             this.toolStrip.TabIndex = 3;
             this.toolStrip.Text = "toolStrip1";
             // 
@@ -243,7 +250,7 @@ namespace FinalProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(817, 614);
+            this.ClientSize = new System.Drawing.Size(1053, 706);
             this.Controls.Add(this.toolStrip);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.menuTop);
