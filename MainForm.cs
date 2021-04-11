@@ -78,7 +78,7 @@ namespace FinalProject
                 else
                 {
                     // ...display an appropriate message.
-                    MessageBox.Show("The Copy operation is not supported by the currentli " +
+                    MessageBox.Show("The Copy operation is not supported by the currently " +
                         "selected window.", "Operation Not Supported");
                 }
             }
@@ -140,6 +140,13 @@ namespace FinalProject
         private void WindowTileVertical(object sender, EventArgs e)
         {
             this.LayoutMdi(MdiLayout.TileVertical);
+        }
+
+        private void WindowCarList(object sender, EventArgs e)
+        {
+            formCarInventory listInstance = formCarInventory.Instance;
+            listInstance.MdiParent = this;
+            listInstance.Show();
         }
     }
 }

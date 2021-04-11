@@ -207,6 +207,7 @@ namespace FinalProject
             this.menuWindowCarList.Size = new System.Drawing.Size(179, 22);
             this.menuWindowCarList.Text = "Open Car &List";
             this.menuWindowCarList.ToolTipText = "Open the Car List window";
+            this.menuWindowCarList.Click += new System.EventHandler(this.WindowCarList);
             // 
             // menuWindowAverageUnits
             // 

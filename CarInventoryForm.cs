@@ -16,7 +16,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CarInventory4
+namespace FinalProject
 {
     public partial class formCarInventory : Form
     {
@@ -304,9 +304,20 @@ namespace CarInventory4
                     instance = new formCarInventory();
                 }
 
-                // Return the instance.
+                // Return the new or existing instance.
                 return instance;
             }
+        }
+
+        /// <summary>
+        /// When the CarInventory instance is closed, the contents of the instance 
+        /// variable is destroyed.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void CarInventoryClosing(object sender, FormClosingEventArgs e)
+        {
+            instance = null;
         }
     }
 }

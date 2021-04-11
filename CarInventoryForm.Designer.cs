@@ -1,5 +1,5 @@
 ﻿
-namespace CarInventory4
+namespace FinalProject
 {
     partial class formCarInventory
     {
@@ -298,6 +298,7 @@ namespace CarInventory4
             this.Name = "formCarInventory";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Car Inventory";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CarInventoryClosing);
             this.Load += new System.EventHandler(this.FormLoad);
             this.ResumeLayout(false);
             this.PerformLayout();
