@@ -1,5 +1,5 @@
 ﻿// Author: Kellen McComb
-// Last Modified: January 28, 2021
+// Last Modified:   April 13, 2021
 //
 // Original Author: Kyle Chapman
 // Start Date: January 24, 2021
@@ -10,7 +10,8 @@
 //  value is compared to the average temperature value from the previous week
 //  and a message is generated based on this. Functionality to reset and exit
 //  the form is also available.
-    
+//  Used as an MDI child form for NETD2202's Final Project.
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

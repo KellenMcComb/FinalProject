@@ -1,8 +1,7 @@
 ﻿// Author:          Kellen McComb
-// Last Modified:   March 28, 2021
+// Last Modified:   April 13, 2021
 // Description:
-//  Basic text editor that fulfills every requirement of Lab #5, and more!
-//  Contains functions such as "Save", and "Save As". And more!
+//  Basic text editor that is used as an MDI child form for NETD2202's Final Project.
 
 using System;
 using System.IO;

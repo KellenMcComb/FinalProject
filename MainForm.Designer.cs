@@ -55,7 +55,6 @@ namespace FinalProject
             this.menuWindowWeeklyTemperature = new System.Windows.Forms.ToolStripMenuItem();
             this.menuHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.menuHelpAbout = new System.Windows.Forms.ToolStripMenuItem();
-            this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.toolStripNew = new System.Windows.Forms.ToolStripButton();
             this.toolStripOpen = new System.Windows.Forms.ToolStripButton();
@@ -274,14 +273,6 @@ namespace FinalProject
             this.menuHelpAbout.ToolTipText = "Show information about this application";
             this.menuHelpAbout.Click += new System.EventHandler(this.HelpAbout);
             // 
-            // statusStrip
-            // 
-            this.statusStrip.Location = new System.Drawing.Point(0, 689);
-            this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(1184, 22);
-            this.statusStrip.TabIndex = 2;
-            this.statusStrip.Text = "statusStrip1";
-            // 
             // toolStrip
             // 
             this.toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -330,7 +321,6 @@ namespace FinalProject
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 711);
             this.Controls.Add(this.toolStrip);
-            this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.menuTop);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuTop;
@@ -349,7 +339,6 @@ namespace FinalProject
         #endregion
 
         private System.Windows.Forms.MenuStrip menuTop;
-        private System.Windows.Forms.StatusStrip statusStrip;
         private System.Windows.Forms.ToolStrip toolStrip;
         private System.Windows.Forms.ToolTip toolTip;
         private System.Windows.Forms.ToolStripMenuItem menuFile;

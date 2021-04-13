@@ -1,9 +1,10 @@
 ﻿// Author:          Kellen McComb
-// Last Modified:   April 06, 2021
+// Last Modified:   April 13, 2021
 // Description:
 //  This program takes user input for a car's make, model, manufacture year, 
 //  price, and new status, and adds them to a list of car class objects. The
 //  cars are displayed in an inventory form and existing cars can be modified. 
+//  Used as an MDI child form for NETD2202's Final Project.
 
 
 using System;

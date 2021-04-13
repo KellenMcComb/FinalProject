@@ -1,7 +1,6 @@
-﻿// Author: Kellen McComb
-// Last Modified Date: January 28, 2021
-// App Name: AverageUnitsShippedUpdated
-// App Description: 
+﻿// Author:          Kellen McComb
+// Last Modified:   April 13, 2021
+// Description: 
 //  This program takes user input for number of units shipped and stores it in a 2-D array of
 //  inputs. The input is validated to be a whole number between 0 and 5000 inclusive.
 //  Each entry will increment the displayed day by 1. After 7 successful entries they are 
@@ -9,6 +8,7 @@
 //  entering numbers into the next employee's field. When all 3 employees have 7 entries, the
 //  total average is calculated and displayed, and the form entry controls are disabled until
 //  the reset button is hit to clear the appropriate controls and allow for more input.
+//  Used as an MDI child form for NETD2202's Final Project.
 
 
 

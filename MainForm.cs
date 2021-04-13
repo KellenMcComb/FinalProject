@@ -1,4 +1,11 @@
-﻿using System;
+﻿// Author:          Kellen McComb
+// Last Modified:   April 13, 2021
+// Description:
+//  Main form for the NETD2202 Final Project which consists of an MDI parent form
+//  acting as the hub for multiple other projects from the course added as child forms.
+
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
