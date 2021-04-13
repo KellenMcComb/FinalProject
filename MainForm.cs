@@ -17,6 +17,7 @@ namespace FinalProject
             InitializeComponent();
         }
 
+        #region "File Event Handlers"
 
         /// <summary>
         /// Creates a new text editor child window.
@@ -35,7 +36,7 @@ namespace FinalProject
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void FileOpen(object sender, EventArgs e)
+        public void FileOpen(object sender, EventArgs e)
         {
             // If there is an active window:
             if (this.MdiChildren.Length > 0)
@@ -102,9 +103,11 @@ namespace FinalProject
                         "currently selected window.", "Operation Not Supported");
                 }
             }
+            // If there are no active windows...
             else
             {
-                MessageBox.Show("You must have an open text editor window to save.",
+                // ...display an appropriate message.
+                MessageBox.Show("You must have an open text editor window to Save.",
                     "Operation Not Supported");
             }
         }
@@ -138,7 +141,7 @@ namespace FinalProject
             }
             else
             {
-                MessageBox.Show("You must have an open text editor window to save.",
+                MessageBox.Show("You must have an open text editor window to Save.",
                     "Operation Not Supported");
             }
         }
@@ -200,7 +203,7 @@ namespace FinalProject
             }
             else
             {
-                MessageBox.Show("To close a window, a window must first be open.",
+                MessageBox.Show("To Close a window, a window must first be open.",
                     "Operation Not Supported");
             }
         }
@@ -215,6 +218,9 @@ namespace FinalProject
             // Me close form.
             Close();
         }
+
+        #endregion
+        #region "Edit Event Handlers"
 
         /// <summary>
         /// If the active mdi window is a text editor, copy and delete the
@@ -242,6 +248,14 @@ namespace FinalProject
                         "selected window.", "Operation Not Supported");
                 }
             }
+            // If there are no active windows...
+            else
+            {
+                // ...display an appropriate message.
+                MessageBox.Show("You must have an open text editor window to Cut.",
+                    "Operation Not Supported");
+            }
+
         }
 
         /// <summary>
@@ -268,6 +282,13 @@ namespace FinalProject
                     MessageBox.Show("The Copy operation is not supported by the currently " +
                         "selected window.", "Operation Not Supported");
                 }
+            }
+            // If there are no active windows...
+            else
+            {
+                // ...display an appropriate message.
+                MessageBox.Show("You must have an open text editor window to Copy.",
+                    "Operation Not Supported");
             }
         }
 
@@ -297,7 +318,17 @@ namespace FinalProject
                         "selected window.", "Operation Not Supported");
                 }
             }
+            // If there are no active windows...
+            else
+            {
+                // ...display an appropriate message.
+                MessageBox.Show("You must have an open text editor window to Paste.",
+                    "Operation Not Supported");
+            }
         }
+
+        #endregion
+        #region "Window Event Handlers"
 
 
         /// <summary>
@@ -390,6 +421,9 @@ namespace FinalProject
             temperatureInstance.Focus();
         }
 
+        #endregion
+        #region "Help Event Handlers"
+
         /// <summary>
         /// Displays the "About" information for the program.
         /// </summary>
@@ -402,6 +436,6 @@ namespace FinalProject
                 "For NETD 2202\n" + "April 2021", "About This Application");
         }
 
-        
+        #endregion
     }
 }

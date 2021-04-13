@@ -76,6 +76,11 @@ namespace FinalProject
                 // Update the application title to reflect current filepath.
                 UpdateTitle();
             }
+            else
+            {
+                // Otherwise, close the blank text editor form.
+                this.Close();               
+            }
         }
 
         /// <summary>
